@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 MultiCart
 
-## Getting Started
+### A full-stack multi-vendor e-commerce marketplace built with Next.js, TypeScript, MongoDB, Redux, Stripe, Cloudinary, NextAuth, and Tailwind CSS.
 
-First, run the development server:
+[🚀 Live Demo](https://multivendor-six.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ✨ Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+MultiCart is a full-stack multi-vendor marketplace where customers can browse products, manage carts, place orders, make secure payments, track deliveries, and interact with multiple vendors through a single platform.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The platform includes separate workflows for:
 
-## Learn More
+- 👤 Customers
+- 🏪 Vendors
+- 🛡️ Administrators
 
-To learn more about Next.js, take a look at the following resources:
+Built with a modern Next.js architecture and designed with responsive UI, animated interactions, secure authentication, payment integration, and role-based workflows.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Features
 
-## Deploy on Vercel
+### 👤 Customer
+- User registration and authentication
+- Browse and search products
+- Category-based product discovery
+- Shopping cart management
+- Product reviews
+- Order placement
+- Cash on Delivery
+- Stripe online payments
+- Order tracking
+- Order cancellation
+- Product return workflow
+- Profile management
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🏪 Vendor
+- Vendor registration
+- Vendor approval workflow
+- Product creation
+- Product management
+- Product activation/deactivation
+- Order management
+- Product verification workflow
+- Vendor-specific product/order views
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🛡️ Admin
+- Admin dashboard
+- Vendor approval
+- Product approval/rejection
+- Order monitoring
+- Vendor statistics
+- Product statistics
+- Platform earnings overview
+- Role management
+
+---
+
+## 🧰 Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| Next.js | Full-stack React framework |
+| TypeScript | Type safety |
+| MongoDB | Database |
+| Mongoose | Database modeling |
+| Redux | Global state management |
+| NextAuth | Authentication |
+| Stripe | Online payments |
+| Cloudinary | Image management |
+| Tailwind CSS | Styling |
+| Framer Motion | UI animations |
+| Axios | API communication |
+
+---
+
+---
+
+## 🔐 Security
+
+- Protected authentication and authorization flows
+- Role-based access control
+- Server-side handling of sensitive credentials
+- Stripe webhook signature verification
+- Environment variables for secrets and API credentials
+- Sensitive keys kept out of source control
+
+---
+
+## 📁 Project Structure
+
+
+src/
+├── app/
+│   ├── api/
+│   │   ├── admin/
+│   │   ├── auth/
+│   │   ├── order/
+│   │   ├── user/
+│   │   └── vendor/
+│   │
+│   ├── cart/
+│   ├── category/
+│   ├── checkout/
+│   ├── login/
+│   ├── orders/
+│   ├── profile/
+│   ├── register/
+│   ├── shop/
+│   └── viewProduct/
+│
+├── components/
+│   ├── admin/
+│   ├── user/
+│   └── vendor/
+│
+├── hooks/
+├── model/
+└── redux/
+
+-----
+
+
+## 🧩 Engineering Challenges
+
+### Multi-Role Architecture
+Designed separate workflows for customers, vendors, and administrators while maintaining a shared marketplace.
+
+### Payment Processing
+Integrated Stripe online payments and server-side webhook verification to handle payment events securely.
+
+### Product Approval Workflow
+Implemented an admin verification process where vendor products must be reviewed before becoming publicly available.
+
+### Order Lifecycle
+Built order cancellation, delivery tracking, payment status, and product return workflows.
+
+### Image Management
+Integrated Cloudinary for storing and managing product and profile images.
+
+### Production Readiness
+Validated the application with production builds and resolved TypeScript issues before deployment.
