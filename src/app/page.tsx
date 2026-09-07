@@ -80,9 +80,3 @@ export default async function Home() {
     </div>
   );
 }
-
-// 2 hour 22 min part 2
-
-// 10.30 hours 2nd part review
-
-// need to add review on categories page

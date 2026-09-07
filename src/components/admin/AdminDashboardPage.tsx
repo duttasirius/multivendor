@@ -135,7 +135,7 @@ function AdminDashboardPage() {
             // Animated vendor card; fades in, slides upward, appears with a staggered delay, and lifts slightly when hovered.
             return (
               <motion.div
-                key={vendor._id}
+                key={vendor._id?.toString()}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{

@@ -202,10 +202,14 @@ function Page() {
       alert("Product returned successfully");
     } catch (error) {
       // Show the backend error message if the API sends one.
-      alert(
-        error?.response?.data?.message ||
-          "Something went wrong while returning the product",
-      );
+      if (axios.isAxiosError(error)) {
+        alert(
+          error.response?.data?.message ||
+            "Something went wrong while returning the product",
+        );
+      } else {
+        alert("Something went wrong while returning the product");
+      }
 
       // Print the actual error in the browser console for debugging.
       console.log("Return Product Error:", error);

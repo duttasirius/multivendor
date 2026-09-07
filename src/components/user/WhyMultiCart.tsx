@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import {
   ShieldCheck,
   BadgeCheck,
@@ -51,7 +51,7 @@ const WhyMultiCart = () => {
     },
   ];
 
-  const cardVariants = {
+  const cardVariants: Variants = {
     hidden: {
       opacity: 0,
       y: 35,
@@ -66,7 +66,7 @@ const WhyMultiCart = () => {
     },
   };
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {},
     show: {
       transition: {

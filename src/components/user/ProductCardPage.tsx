@@ -1,12 +1,17 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+
+import { motion, Variants } from "framer-motion";
+
 import { ArrowRight, PackageSearch, Sparkles } from "lucide-react";
+
 import { useSelector } from "react-redux";
 
 import { RootState } from "@/redux/store";
+
 import ProductCard from "../ProductCard";
+
 import { useRouter } from "next/navigation";
 
 function ProductCardPage() {
@@ -20,12 +25,14 @@ function ProductCardPage() {
   );
 
   // Animation for the entire page.
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: {
       opacity: 0,
     },
+
     visible: {
       opacity: 1,
+
       transition: {
         staggerChildren: 0.08,
       },
@@ -33,16 +40,18 @@ function ProductCardPage() {
   };
 
   // Animation for each product card.
-  const itemVariants = {
+  const itemVariants: Variants = {
     hidden: {
       opacity: 0,
       y: 30,
       scale: 0.97,
     },
+
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
+
       transition: {
         duration: 0.45,
         ease: "easeOut",
@@ -72,7 +81,6 @@ function ProductCardPage() {
           className="mb-4 inline-flex items-center gap-2 rounded-full border border-blue-100 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-600 shadow-sm"
         >
           <Sparkles size={16} />
-
           <span>Discover Something Amazing</span>
         </motion.div>
 
@@ -117,7 +125,7 @@ function ProductCardPage() {
               </motion.div>
             ))}
 
-            <div className="col-span-1 flex w-full justify-center sm:col-span-2 md:col-span-3 lg:col-span-4 mt-6">
+            <div className="col-span-1 mt-6 flex w-full justify-center sm:col-span-2 md:col-span-3 lg:col-span-4">
               <motion.button
                 onClick={() => router.push("/category")}
                 whileHover={{ scale: 1.04, y: -2 }}
