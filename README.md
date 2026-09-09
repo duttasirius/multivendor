@@ -14,32 +14,36 @@
 
 ## 📸 Product Showcase
 
-### 🛒 Customer Marketplace
+### 🛒 Customer Marketplace + AI Shopping Assistant
 
-![MultiCart Customer Marketplace](https://multivendor-six.vercel.app/)
+<p align="center">
+  <img src="./public/readme/customer-marketplace.svg" alt="MultiCart customer marketplace with AI shopping assistant" width="100%" />
+</p>
 
-### 🏪 Multi-Vendor Platform
+### 🏪 Vendor & Admin Marketplace Operations
 
-![MultiCart Multi-Vendor Experience](https://multivendor-six.vercel.app/)
+<p align="center">
+  <img src="./public/readme/vendor-admin.svg" alt="MultiCart vendor and admin marketplace dashboard" width="100%" />
+</p>
 
-> **Note:** GitHub Markdown cannot turn a normal website URL into an image preview. For best README presentation, replace the image URLs above with screenshots committed to `public/` (for example `public/readme/customer.png` and `public/readme/vendor.png`).
+> The visuals above highlight the product experience and marketplace workflows. The live application is available below.
 
 ---
 
 ## 🎯 Why This Project Stands Out
 
-MultiCart is more than a storefront. It models the core complexity of a real marketplace where **customers, vendors, and administrators operate inside one platform** with different permissions, workflows, and business responsibilities.
+MultiCart goes beyond a basic storefront by modeling the complexity of a real marketplace where **customers, vendors, and administrators operate inside one platform** with different permissions, workflows, and responsibilities.
 
 The project demonstrates practical full-stack engineering across:
 
-- **Role-based architecture** for customers, vendors, and admins
-- **Marketplace workflows** for vendor onboarding and product approval
-- **Real payment flows** with Stripe and Cash on Delivery
-- **Order lifecycle management** including cancellation, tracking, and returns
-- **Authentication and authorization** with NextAuth and protected server routes
-- **Cloud image management** through Cloudinary
-- **AI-powered customer interaction** through an integrated chat experience
-- **Server-side API routes** implemented directly with the Next.js App Router
+- 👤 **Role-based architecture** for customers, vendors, and admins
+- 🏪 **Marketplace workflows** for vendor onboarding and product approval
+- 💳 **Payment flows** with Stripe and Cash on Delivery
+- 📦 **Order lifecycle management** including cancellation, tracking, and returns
+- 🔐 **Authentication and authorization** with NextAuth and protected server routes
+- ☁️ **Cloud media management** through Cloudinary
+- 🤖 **AI-powered customer interaction** through an integrated shopping chat experience
+- ⚡ **Next.js App Router APIs** for server-side application logic
 
 ---
 
@@ -58,7 +62,7 @@ The project demonstrates practical full-stack engineering across:
 - Order cancellation
 - Return workflow
 - Profile management
-- AI shopping/chat assistance
+- 🤖 AI shopping/chat assistance
 
 ### 🏪 Vendor Experience
 
@@ -255,25 +259,20 @@ The `development` branch is used for the current development workflow.
 
 ## 📌 Recruiter Snapshot
 
-This project demonstrates hands-on experience with:
-
-**Frontend:** React, Next.js, TypeScript, Tailwind CSS, Redux, responsive UI, animations
-
-**Backend:** Next.js server routes, MongoDB, Mongoose, authentication, role-based authorization
-
-**Commerce:** cart, checkout, Stripe payments, COD, orders, tracking, cancellations, returns
-
-**Marketplace:** vendor onboarding, product moderation, admin workflows, platform analytics
-
-**Integrations:** Stripe, Cloudinary, NextAuth, Axios, AI chat
-
-**Engineering:** full-stack architecture, API design, state management, security, production deployment
+| Area | Demonstrated Skills |
+|---|---|
+| **Frontend** | Next.js, React, TypeScript, Tailwind CSS, Redux, responsive UI, animations |
+| **Backend** | Next.js server routes, MongoDB, Mongoose, authentication, authorization |
+| **Commerce** | Cart, checkout, Stripe, COD, orders, tracking, cancellations, returns |
+| **Marketplace** | Vendor onboarding, product moderation, admin workflows, platform analytics |
+| **Integrations** | Stripe, Cloudinary, NextAuth, Axios, AI chat |
+| **Engineering** | Full-stack architecture, API design, state management, security, deployment |
 
 ---
 
 ## 🚀 Live Project
 
-**MultiCart:** https://multivendor-six.vercel.app/
+### [Open MultiCart →](https://multivendor-six.vercel.app/)
 
 Built as a portfolio-grade full-stack marketplace to demonstrate real-world product engineering patterns rather than a simple CRUD storefront.
 
