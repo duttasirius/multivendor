@@ -1,102 +1,168 @@
-# 🛒 MultiCart
+# 🛍️ MultiCart — Multi-Vendor E-Commerce Marketplace
 
-### A full-stack multi-vendor e-commerce marketplace built with Next.js, TypeScript, MongoDB, Redux, Stripe, Cloudinary, NextAuth, and Tailwind CSS.
+<p align="center">
+  <strong>A production-oriented, full-stack marketplace built with Next.js, TypeScript, MongoDB, Redux, Stripe, Cloudinary, NextAuth, and Tailwind CSS.</strong>
+</p>
 
-[🚀 Live Demo](https://multivendor-six.vercel.app/)
-
----
-
-## ✨ Overview
-
-MultiCart is a full-stack multi-vendor marketplace where customers can browse products, manage carts, place orders, make secure payments, track deliveries, and interact with multiple vendors through a single platform.
-
-The platform includes separate workflows for:
-
-- 👤 Customers
-- 🏪 Vendors
-- 🛡️ Administrators
-
-Built with a modern Next.js architecture and designed with responsive UI, animated interactions, secure authentication, payment integration, and role-based workflows.
+<p align="center">
+  <a href="https://multivendor-six.vercel.app/">🚀 Live Demo</a>
+  ·
+  <a href="https://github.com/duttasirius/multivendor">💻 Source Code</a>
+</p>
 
 ---
 
-## 🚀 Features
+## 📸 Product Showcase
 
-### 👤 Customer
+### 🛒 Customer Marketplace
+
+![MultiCart Customer Marketplace](https://multivendor-six.vercel.app/)
+
+### 🏪 Multi-Vendor Platform
+
+![MultiCart Multi-Vendor Experience](https://multivendor-six.vercel.app/)
+
+> **Note:** GitHub Markdown cannot turn a normal website URL into an image preview. For best README presentation, replace the image URLs above with screenshots committed to `public/` (for example `public/readme/customer.png` and `public/readme/vendor.png`).
+
+---
+
+## 🎯 Why This Project Stands Out
+
+MultiCart is more than a storefront. It models the core complexity of a real marketplace where **customers, vendors, and administrators operate inside one platform** with different permissions, workflows, and business responsibilities.
+
+The project demonstrates practical full-stack engineering across:
+
+- **Role-based architecture** for customers, vendors, and admins
+- **Marketplace workflows** for vendor onboarding and product approval
+- **Real payment flows** with Stripe and Cash on Delivery
+- **Order lifecycle management** including cancellation, tracking, and returns
+- **Authentication and authorization** with NextAuth and protected server routes
+- **Cloud image management** through Cloudinary
+- **AI-powered customer interaction** through an integrated chat experience
+- **Server-side API routes** implemented directly with the Next.js App Router
+
+---
+
+## ✨ Core Features
+
+### 👤 Customer Experience
+
 - User registration and authentication
-- Browse and search products
-- Category-based product discovery
-- Shopping cart management
-- Product reviews
-- Order placement
-- Cash on Delivery
+- Product search and category discovery
+- Product details and reviews
+- Cart management
+- Checkout and order placement
 - Stripe online payments
+- Cash on Delivery
 - Order tracking
 - Order cancellation
-- Product return workflow
+- Return workflow
 - Profile management
+- AI shopping/chat assistance
 
-### 🏪 Vendor
-- Vendor registration
-- Vendor approval workflow
-- Product creation
-- Product management
+### 🏪 Vendor Experience
+
+- Vendor registration and onboarding
+- Admin-controlled vendor approval
+- Product creation and editing
 - Product activation/deactivation
-- Order management
+- Vendor-specific product management
+- Vendor order management
 - Product verification workflow
-- Vendor-specific product/order views
+- Vendor-focused dashboard workflows
 
-### 🛡️ Admin
-- Admin dashboard
-- Vendor approval
+### 🛡️ Admin Experience
+
+- Admin authentication
+- Vendor approval and status management
 - Product approval/rejection
 - Order monitoring
 - Vendor statistics
 - Product statistics
 - Platform earnings overview
-- Role management
+- Role-based administrative controls
+
+---
+
+## 🧠 Engineering Highlights
+
+### Multi-Role Marketplace Architecture
+
+Designed distinct customer, vendor, and administrator workflows while keeping the marketplace inside a unified Next.js application.
+
+### Secure Payment Lifecycle
+
+Integrated Stripe online payments alongside Cash on Delivery, with server-side handling for payment events and webhook verification.
+
+### Product Governance
+
+Vendor-created products can move through an administrative approval process before being surfaced to customers, reflecting a realistic marketplace moderation workflow.
+
+### Order State Management
+
+Implemented order placement, payment status, cancellation, tracking, and return-related flows to model a complete commerce lifecycle.
+
+### API-Driven Full-Stack Architecture
+
+Built server-side API routes for authentication, users, vendors, products, orders, admin operations, and chat directly inside the Next.js App Router.
+
+### Media Infrastructure
+
+Used Cloudinary for product/profile image storage and delivery rather than relying on local filesystem storage.
 
 ---
 
 ## 🧰 Tech Stack
 
-| Technology | Purpose |
+| Technology | Role in the Project |
 |---|---|
-| Next.js | Full-stack React framework |
-| TypeScript | Type safety |
-| MongoDB | Database |
-| Mongoose | Database modeling |
-| Redux | Global state management |
-| NextAuth | Authentication |
-| Stripe | Online payments |
-| Cloudinary | Image management |
-| Tailwind CSS | Styling |
-| Framer Motion | UI animations |
-| Axios | API communication |
+| **Next.js** | Full-stack React framework and App Router |
+| **TypeScript** | Type-safe application development |
+| **MongoDB** | Persistent application data |
+| **Mongoose** | MongoDB data modeling |
+| **Redux** | Global client-side state management |
+| **NextAuth** | Authentication and session management |
+| **Stripe** | Online payment processing |
+| **Cloudinary** | Product and profile media management |
+| **Tailwind CSS** | Responsive UI styling |
+| **Framer Motion** | UI animation and interaction |
+| **Axios** | HTTP/API communication |
 
 ---
 
----
+## 🏗️ Application Architecture
 
-## 🔐 Security
-
-- Protected authentication and authorization flows
-- Role-based access control
-- Server-side handling of sensitive credentials
-- Stripe webhook signature verification
-- Environment variables for secrets and API credentials
-- Sensitive keys kept out of source control
+```text
+                         ┌─────────────────────┐
+                         │     Next.js App     │
+                         │  Customer / Vendor  │
+                         │       / Admin       │
+                         └──────────┬──────────┘
+                                    │
+                  ┌─────────────────┼─────────────────┐
+                  │                 │                 │
+                  ▼                 ▼                 ▼
+            NextAuth          App Router APIs      Redux
+          Authentication       & Server Logic     State Layer
+                  │                 │
+                  │        ┌────────┼───────────┐
+                  │        ▼        ▼           ▼
+                  │     MongoDB   Stripe    Cloudinary
+                  │        │        │           │
+                  └────────┴────────┴───────────┘
+```
 
 ---
 
 ## 📁 Project Structure
 
-
+```text
 src/
 ├── app/
 │   ├── api/
 │   │   ├── admin/
 │   │   ├── auth/
+│   │   ├── chat/
 │   │   ├── order/
 │   │   ├── user/
 │   │   └── vendor/
@@ -119,26 +185,100 @@ src/
 ├── hooks/
 ├── model/
 └── redux/
+```
 
------
+---
 
+## 🔐 Security & Reliability
 
-## 🧩 Engineering Challenges
+- Protected authentication and authorization flows
+- Role-based access control
+- Sensitive credentials handled through environment variables
+- Server-side payment processing
+- Stripe webhook signature verification
+- Sensitive keys excluded from source control
+- Production-oriented TypeScript and build validation
 
-### Multi-Role Architecture
-Designed separate workflows for customers, vendors, and administrators while maintaining a shared marketplace.
+---
 
-### Payment Processing
-Integrated Stripe online payments and server-side webhook verification to handle payment events securely.
+## ⚙️ Local Development
 
-### Product Approval Workflow
-Implemented an admin verification process where vendor products must be reviewed before becoming publicly available.
+### 1. Clone the repository
 
-### Order Lifecycle
-Built order cancellation, delivery tracking, payment status, and product return workflows.
+```bash
+git clone https://github.com/duttasirius/multivendor.git
+cd multivendor
+```
 
-### Image Management
-Integrated Cloudinary for storing and managing product and profile images.
+### 2. Install dependencies
 
-### Production Readiness
-Validated the application with production builds and resolved TypeScript issues before deployment.
+```bash
+npm install
+```
+
+### 3. Configure environment variables
+
+Create a local `.env.local` file with the credentials required by the application.
+
+> Never commit real secrets or production credentials to GitHub.
+
+### 4. Run the development server
+
+```bash
+npm run dev
+```
+
+Open:
+
+```text
+http://localhost:3000
+```
+
+### 5. Production build
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## ☁️ Deployment
+
+The application is deployed with Vercel:
+
+**Live:** https://multivendor-six.vercel.app/
+
+The `development` branch is used for the current development workflow.
+
+---
+
+## 📌 Recruiter Snapshot
+
+This project demonstrates hands-on experience with:
+
+**Frontend:** React, Next.js, TypeScript, Tailwind CSS, Redux, responsive UI, animations
+
+**Backend:** Next.js server routes, MongoDB, Mongoose, authentication, role-based authorization
+
+**Commerce:** cart, checkout, Stripe payments, COD, orders, tracking, cancellations, returns
+
+**Marketplace:** vendor onboarding, product moderation, admin workflows, platform analytics
+
+**Integrations:** Stripe, Cloudinary, NextAuth, Axios, AI chat
+
+**Engineering:** full-stack architecture, API design, state management, security, production deployment
+
+---
+
+## 🚀 Live Project
+
+**MultiCart:** https://multivendor-six.vercel.app/
+
+Built as a portfolio-grade full-stack marketplace to demonstrate real-world product engineering patterns rather than a simple CRUD storefront.
+
+---
+
+## 📄 License
+
+This project is for educational and portfolio purposes.
